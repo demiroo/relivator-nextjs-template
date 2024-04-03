@@ -90,7 +90,7 @@ export async function SiteHeader({
               size="icon"
               target="_blank"
               variant="outline"
-              href="https://github.com/demiroo/fleura-dev"
+              href="https://github.com/demiroo/fleura"
             >
               <Github className="h-4 w-4" />
             </ButtonLink>
