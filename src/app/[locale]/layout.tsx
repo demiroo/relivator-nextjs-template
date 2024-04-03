@@ -33,6 +33,7 @@ import { TooltipProvider } from "~/islands/providers/tooltip";
 import ZustandProvider from "~/islands/providers/zustand";
 import { defaultLocale, locales } from "~/navigation";
 import { Room } from "~/plugins/million/islands/room";
+import Loglib from "@loglib/tracker/react";
 
 // Every page in the app will have this metadata, You can override it by
 // defining the `metadata` in the `page.tsx` or in children `layout.tsx`
