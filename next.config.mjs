@@ -37,6 +37,8 @@ const hostnames = [
   "res.cloudinary.com",
   "utfs.io",
   "www.gravatar.com",
+  "fleura.de",
+  "vercel.com",
 ];
 
 /** @type {import('next').NextConfig} */
@@ -69,7 +71,7 @@ const nextConfig = {
       // To allow robots to crawl the site, use the NEXT_PUBLIC_IS_LIVE env variable
       // You may want to also use this variable to conditionally render any tracking scripts
       // @see https://github.com/payloadcms/payload/blob/main/templates/ecommerce/next.config.js
-      if (process.env.NEXT_PUBLIC_IS_LIVE === "false") {
+      if (process.env.NEXT_PUBLIC_IS_LIVE === "true") {
         headers.push({
           headers: [
             {

@@ -18,7 +18,7 @@ import type { Icons } from "./islands/icons";
 
 // todo: parse this from clerk's dashboard instead of hardcoding it
 export const oauthProvidersClerk = [
-  { name: "Google", strategy: "oauth_google", icon: "google" },
+ // { name: "Google", strategy: "oauth_google", icon: "google" },
  // { name: "Discord", strategy: "oauth_discord", icon: "discord" },
  // { name: "Microsoft", strategy: "oauth_microsoft", icon: "microsoft" },
  // { name: "Facebook", strategy: "oauth_facebook", icon: "facebook" },
@@ -54,8 +54,8 @@ export const contactConfig = {
   email: "support@fleura.de",
 };
 
-export const REPOSITORY_OWNER = "blefnk";
-export const REPOSITORY_NAME = "relivator";
+export const REPOSITORY_OWNER = "demiroo";
+export const REPOSITORY_NAME = "fleura";
 export const REPOSITORY_URL = `https://github.com/${REPOSITORY_OWNER}/${REPOSITORY_NAME}`;
 export const DISCORD_URL = "https://discord.gg/mancos007";
 export const baseUrl = new URL(
@@ -237,7 +237,7 @@ export const siteConfig = {
       items: [
         {
           title: "Fleura",
-          href: "https://github.com/blefnk/relivator",
+          href: "https://github.com/demiroo/fleura",
           external: true,
         },
         {
