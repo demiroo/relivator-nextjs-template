@@ -50,24 +50,23 @@ export function OAuthSignInClerk() {
         )} sm:gap-4`}
       >
         {oauthProvidersClerk.map((provider) => {
-          const Icon = Icons[provider.icon];
+          const Icon = Icons[""];
 
           return (
-            <div key={provider.strategy} className="flex justify-center">
+            <div key={""} className="flex justify-center">
               <Button
-                aria-label={`Sign in with ${provider.name}`}
+                aria-label={`""`}
                 variant="outline"
                 className="w-full bg-background sm:w-auto"
-                onClick={() => void oauthSignIn(provider.strategy)}
+
                 disabled={isLoading !== null}
               >
-                {isLoading === provider.strategy ?
+
                   <Icons.spinner
                     className="mr-2 h-4 w-4 animate-spin"
                     aria-hidden="true"
                   />
-                : <Icon className="mr-2 h-4 w-4" aria-hidden="true" />}
-                {provider.name}
+                : <Icon className="mr-2 h-4 w-4" aria-hidden="true" />
               </Button>
             </div>
           );

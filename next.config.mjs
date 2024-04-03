@@ -38,7 +38,7 @@ const hostnames = [
   "utfs.io",
   "www.gravatar.com",
   "fleura.de",
-  "vercel.com.com",
+  "vercel.com",
 ];
 
 /** @type {import('next').NextConfig} */
