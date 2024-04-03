@@ -212,6 +212,7 @@
     "next-themes": "^0.2.1",
     "next-usequerystate": "^1.17.0",
     "nextjs-google-analytics": "^2.3.3",
+    "nextjs-toploader": "^1.6.11",
     "nodemailer": "^6.9.10",
     "pg": "^8.11.3",
     "postgres": "^3.4.3",

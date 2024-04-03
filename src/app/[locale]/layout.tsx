@@ -7,6 +7,7 @@
  */
 
 import "~/styles/globals.css";
+import NextTopLoader from 'nextjs-toploader';
 
 import type { PropsWithChildren } from "react";
 import { type Metadata } from "next";
@@ -163,6 +164,9 @@ export default async function LocaleLayout({
                 <AuthProvider>
                   <Flowbite theme={{ theme: customTheme }}>
                     <ShowInfo />
+                    <NextTopLoader
+                     showSpinner={false}
+                    />
                     {children}
                   </Flowbite>
                 </AuthProvider>
