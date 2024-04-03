@@ -58,12 +58,12 @@ export async function FeaturedStoreItems() {
   const guestEmail = getCookie("GUEST_EMAIL")?.toString() || null;
 
   return (
-    <section
-      id="featured-items"
-      aria-labelledby="featured-items-heading"
-      className="mt-10 grid grid-cols-1 items-stretch gap-6 text-card-foreground/80 sm:grid-cols-2"
-    >
-      <div className="rounded-lg border-2 border-dotted bg-card px-6 py-16 shadow-sm">
+   <section
+  id="featured-items"
+  aria-labelledby="featured-items-heading"
+  className="mt-10 grid grid-cols-1 items-stretch gap-6 text-card-foreground/80 sm:grid-cols-1"
+>
+      <div className="rounded-lg border-2 border-dotted bg-card px-6 py-8 shadow-sm">
         <div className="flex items-baseline">
           <h3 className="mb-10 flex-1 font-heading text-xl md:flex md:text-2xl lg:text-3xl">
             <span className="mr-1 hidden md:block">Featured</span> Products
@@ -110,8 +110,7 @@ export async function FeaturedStoreItems() {
           }
         </div>
       </div>
-
-      <div className="rounded-lg border-2 border-dotted bg-card px-6 py-16 shadow-sm">
+      <div className="rounded-lg border-2 border-dotted bg-card px-6 py-8 shadow-sm">
         <div className="flex items-baseline">
           <h2 className="mb-10 flex-1 font-heading text-xl md:flex md:text-2xl lg:text-3xl">
             <span className="mr-1 hidden md:block">Featured</span> Stores
