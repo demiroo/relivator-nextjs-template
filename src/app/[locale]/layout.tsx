@@ -17,7 +17,7 @@ import { ShowInfo } from "~/indicators-error";
 import type { LocaleLayoutParams, WithChildren } from "~/types";
 import { cn } from "~/utils";
 import { Flowbite, ThemeModeScript } from "flowbite-react";
-
+import { Under } from "~/islands/primitives/under";
 import { siteConfig } from "~/app";
 import { TRPC } from "~/core/trpc/react";
 // import { seo } from "~/data/meta";
@@ -172,6 +172,7 @@ export default async function LocaleLayout({
             <LoglibAnalytics />
           </NextThemesProvider>
         </TRPC>
+        <Under/>
       </body>
     </html>
   );
