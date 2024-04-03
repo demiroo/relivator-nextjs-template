@@ -33,7 +33,6 @@ import { TooltipProvider } from "~/islands/providers/tooltip";
 import ZustandProvider from "~/islands/providers/zustand";
 import { defaultLocale, locales } from "~/navigation";
 import { Room } from "~/plugins/million/islands/room";
-import Loglib from "@loglib/tracker/react";
 
 // Every page in the app will have this metadata, You can override it by
 // defining the `metadata` in the `page.tsx` or in children `layout.tsx`
@@ -166,18 +165,18 @@ export default async function LocaleLayout({
                   <Flowbite theme={{ theme: customTheme }}>
                     <ShowInfo />
                     <NextTopLoader showSpinner={false} />
-                    <Loglib
-                    config={{
-                        id: "fleura",
-                    }}
-                />
-                    {children}
+                  {children}
                   </Flowbite>
                 </AuthProvider>
               </ZustandProvider>
             </TooltipProvider>
             <TailwindScreens />
             <LoglibAnalytics />
+             <Loglib
+                    config={{
+                        id: "fleura",
+                    }}
+                />
           </NextThemesProvider>
         </TRPC>
         <Under/>
