@@ -72,7 +72,7 @@ export function AddProductForm({ storeId }: AddProductFormProps) {
       description: "",
       price: "",
       inventory: NaN,
-      category: "clothing",
+      category: "topfpflanzen",
       subcategory: "",
       images: [],
     },

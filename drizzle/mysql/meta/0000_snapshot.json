@@ -505,11 +505,11 @@
         },
         "category": {
           "name": "category",
-          "type": "enum('accessories','furniture','clothing','tech')",
+          "type": "enum('trauer','schnittblumen','topfpflanzen','hochzeit')",
           "primaryKey": false,
           "notNull": true,
           "autoincrement": false,
-          "default": "'clothing'"
+          "default": "'topfpflanzen'"
         },
         "subcategory": {
           "name": "subcategory",

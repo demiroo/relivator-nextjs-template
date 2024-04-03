@@ -138,7 +138,7 @@ export const siteConfig = {
         },
         {
           title: "Strauss Maker",
-          href: "/custom/clothing",
+          href: "/custom/topfpflanzen",
           description: "Gestalte deinen Strauss",
           items: [],
         },

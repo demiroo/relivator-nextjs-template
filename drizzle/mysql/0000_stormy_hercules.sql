@@ -79,7 +79,7 @@ CREATE TABLE `acme_products` (
 	`name` varchar(191) NOT NULL,
 	`description` text,
 	`images` json DEFAULT ('null'),
-	`category` enum('accessories','furniture','clothing','tech') NOT NULL DEFAULT 'clothing',
+	`category` enum('trauer','schnittblumen','topfpflanzen','hochzeit') NOT NULL DEFAULT 'topfpflanzen',
 	`subcategory` varchar(191),
 	`price` decimal(10,2) NOT NULL DEFAULT '0',
 	`inventory` int NOT NULL DEFAULT 0,

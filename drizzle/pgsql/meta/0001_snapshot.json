@@ -544,7 +544,7 @@
           "type": "category",
           "primaryKey": false,
           "notNull": true,
-          "default": "'clothing'"
+          "default": "'topfpflanzen'"
         },
         "subcategory": {
           "name": "subcategory",
@@ -974,10 +974,10 @@
     "category": {
       "name": "category",
       "values": {
-        "accessories": "accessories",
-        "furniture": "furniture",
-        "clothing": "clothing",
-        "tech": "tech"
+        "trauer": "trauer",
+        "schnittblumen": "schnittblumen",
+        "topfpflanzen": "topfpflanzen",
+        "hochzeit": "hochzeit"
       }
     },
     "mode": {

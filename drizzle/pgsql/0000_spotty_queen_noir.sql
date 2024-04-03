@@ -1,5 +1,5 @@
 DO $$ BEGIN
- CREATE TYPE "category" AS ENUM('accessories', 'furniture', 'clothing', 'tech');
+ CREATE TYPE "category" AS ENUM('trauer', 'schnittblumen', 'topfpflanzen', 'hochzeit');
 EXCEPTION
  WHEN duplicate_object THEN null;
 END $$;
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS "acme_products" (
 	"name" text NOT NULL,
 	"description" text,
 	"images" json DEFAULT 'null'::json,
-	"category" "category" DEFAULT 'clothing' NOT NULL,
+	"category" "category" DEFAULT 'topfpflanzen' NOT NULL,
 	"subcategory" text,
 	"price" numeric(10, 2) DEFAULT '0' NOT NULL,
 	"inventory" integer DEFAULT 0 NOT NULL,
