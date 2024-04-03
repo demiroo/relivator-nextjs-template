@@ -22,10 +22,10 @@ import type Stripe from "stripe";
 export const roleEnum = pgEnum("role", ["user", "admin"]);
 export const modeEnum = pgEnum("mode", ["buyer", "seller"]);
 export const categoryEnum = pgEnum("category", [
-  "accessories",
-  "furniture",
-  "clothing",
-  "tech",
+  "trauer",
+  "schnittblumen",
+  "topfpflanzen",
+  "hochzeit",
 ]);
 
 export const pgTable = pgTableCreator((name) => `acme_${name}`);
@@ -163,7 +163,7 @@ export const products = pgTable("products", {
   storeId: integer("storeId").notNull().default(1),
   description: text("description"),
   images: json("images").$type<StoredFile[] | null>().default(null),
-  category: categoryEnum("category").notNull().default("clothing"),
+  category: categoryEnum("category").notNull().default("topfpflanzen"),
   subcategory: text("subcategory"),
   price: decimal("price", { precision: 10, scale: 2 }).notNull().default("0"),
   inventory: integer("inventory").notNull().default(0),

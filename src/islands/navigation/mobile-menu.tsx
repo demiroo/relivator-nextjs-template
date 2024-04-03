@@ -39,9 +39,13 @@ export function MobileMenu({
         >
           <Icons.menu className="h-6 w-6" />
           <span className="sr-only">Toggle Menu</span>
-          <span className="ml-2 hidden font-heading tracking-wide md:block">
-            {siteConfig.name}
-          </span>
+        <Link
+        aria-label="Home"
+        href="/"
+        className="ml-2 font-heading tracking-wide md:block"
+      >
+        <img className="ml-1 tracking-wide md:block" src="/favicon.ico" alt={""} width={32} height={32} />
+      </Link>
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="pl-1 pr-0">
@@ -52,6 +56,7 @@ export function MobileMenu({
             className="flex items-center"
             onClick={() => setIsOpen(false)}
           >
+            <img src="/favicon.ico" alt={""} width={32} height={32} />
             <span className="font-heading">{siteConfig.name}</span>
           </Link>
         </div>

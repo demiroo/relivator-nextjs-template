@@ -14,15 +14,15 @@ import { productCategories } from "~/server/config/products";
 import { networks } from "~/server/config/socials";
 
 import { env } from "./env.mjs";
-import { Icons } from "./islands/icons";
+import type { Icons } from "./islands/icons";
 
 // todo: parse this from clerk's dashboard instead of hardcoding it
 export const oauthProvidersClerk = [
   { name: "Google", strategy: "oauth_google", icon: "google" },
-  { name: "Discord", strategy: "oauth_discord", icon: "discord" },
-  // { name: "Microsoft", strategy: "oauth_microsoft", icon: "microsoft" },
-  // { name: "Facebook", strategy: "oauth_facebook", icon: "facebook" },
-  // { name: "Github", strategy: "oauth_github", icon: "gitHub" },
+ // { name: "Discord", strategy: "oauth_discord", icon: "discord" },
+ // { name: "Microsoft", strategy: "oauth_microsoft", icon: "microsoft" },
+ // { name: "Facebook", strategy: "oauth_facebook", icon: "facebook" },
+//  { name: "Github", strategy: "oauth_github", icon: "gitHub" },
 ] satisfies {
   name: string;
   icon: keyof typeof Icons;
@@ -30,44 +30,43 @@ export const oauthProvidersClerk = [
 }[];
 
 export const appts = {
-  name: "Relivator",
+  name: "Fleura",
   debug: false,
   social: networks({
-    youtube: "@bleverse_com",
-    discord: "Pb8uKbwpsJ",
-    facebook: "groups/bleverse",
-    twitter: "blefnk",
-    github: "blefnk",
+    discord: "mancos007",
+    facebook: "fleura.germany",
+    twitter: "fleura_germany",
+    github: "demiroo",
   }),
 };
 
 export default appts;
 
 const links = {
-  twitter: "https://x.com/blefnk",
-  github: "https://github.com/blefnk/relivator",
-  githubAccount: "https://github.com/blefnk",
-  discord: "https://discord.gg/Pb8uKbwpsJ",
-  facebook: "https://facebook.com/groups/bleverse",
+  twitter: "https://x.com/oezkandemir",
+  github: "https://github.com/demiroo/fleura",
+  githubAccount: "https://github.com/demiroo",
+  discord: "https://discord.gg/mancos007",
+  facebook: "",
 };
 
 export const contactConfig = {
-  email: "blefnk@gmail.com",
+  email: "support@fleura.de",
 };
 
 export const REPOSITORY_OWNER = "blefnk";
 export const REPOSITORY_NAME = "relivator";
 export const REPOSITORY_URL = `https://github.com/${REPOSITORY_OWNER}/${REPOSITORY_NAME}`;
-export const DISCORD_URL = "https://discord.gg/Pb8uKbwpsJ";
+export const DISCORD_URL = "https://discord.gg/mancos007";
 export const baseUrl = new URL(
-  env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
+  env.NEXT_PUBLIC_APP_URL ?? "https://fleura.de",
 );
 
 export const BASE_URL =
-  process.env.NODE_ENV === "production" ? baseUrl : "http://localhost:3000";
-export const BRAND_NAME = "Relivator";
+  process.env.NODE_ENV === "production" ? baseUrl : "https://fleura.de";
+export const BRAND_NAME = "Fleura";
 export const BRAND_DESCRIPTION =
-  "Next.js 14 free store and dashboard template. It helps you build great eCommerce and SaaS apps faster than ever. Get it now!";
+  "Fleura der Starke partner in sachen Blumen.";
 
 export const OWNER_ROLE = "owner";
 export const ADMIN_ROLE = "admin";
@@ -81,19 +80,21 @@ export const settings = {
 };
 
 export const siteConfig = {
-  name: "Relivator",
-  shortName: "Relivator",
-  author: "Nazarii Korniienko",
-  description:
-    "NextJS 14 free starter: store, landing, dashboard. It helps you build great eCommerce and SaaS apps faster than ever. Get it!",
+  name: "Fleura",
+  shortName: "Blumen",
+  author: "Fleura",
+  description: "Blumen für Jeden.",
   company: {
-    name: "Nazarii Korniienko",
-    link: "https://github.com/blefnk/relivator",
-    email: "blefnk@gmail.com",
-    twitter: "@blefnk",
+    name: "Fleura",
+    link: "",
+    email: "support@fleura.de",
+    twitter: "@oezkandemir",
   },
-  handles: {
-    twitter: "@blefnk",
+  base: {
+    url: "https://fleura.de",
+  },
+ handles: {
+    twitter: "https://fleura.de/",
   },
   keywords: [
     "App Router",
@@ -124,21 +125,21 @@ export const siteConfig = {
     base: env.NEXT_PUBLIC_APP_URL,
     author: REPOSITORY_OWNER,
   },
-  ogImage: `${env.NEXT_PUBLIC_APP_URL}/og-image.png`,
+  ogImage: `${env.NEXT_PUBLIC_APP_URL}/og-image.jpg`,
   mainNav: [
     {
-      title: "Lobby",
+      title: "Über Uns",
       items: [
         {
-          title: "Products",
+          title: "Unsere Produkte",
           href: "/products",
-          description: "All the products we have to offer.",
+          description: "Al unsere Produkte zum Kauf.",
           items: [],
         },
         {
-          title: "Build a Look",
+          title: "Strauss Maker",
           href: "/custom/clothing",
-          description: "Build your own custom clothes.",
+          description: "Gestalte deinen Strauss",
           items: [],
         },
         {
@@ -147,15 +148,21 @@ export const siteConfig = {
           description: "Read our latest blog posts.",
           items: [],
         },
+        {
+          title: "Docs",
+          href: "https://docs.fleura.de",
+          description: "Fleura Documentation",
+          items: [],
+        },
       ],
     },
     ...productCategories.map((category) => ({
       title: category.title,
       items: [
         {
-          title: "All",
+          title: "Alle",
           href: `/categories/${slugify(category.title)}`,
-          description: `All ${category.title}.`,
+          description: `Alle ${category.title}.`,
           items: [],
         },
         ...category.subcategories.map((subcategory) => ({
@@ -170,28 +177,9 @@ export const siteConfig = {
   links,
   footerNav: [
     {
-      title: "Bleverse",
+      title: "Fleura",
       items: [
-        {
-          title: "Community",
-          href: "https://bleverse.com",
-          external: true,
-        },
-        {
-          title: "MF Piano",
-          href: "https://mfpiano.org",
-          external: true,
-        },
-        {
-          title: "Peresfer",
-          href: "https://peresfer.com",
-          external: true,
-        },
-        {
-          title: "Relivator",
-          href: "https://relivator.bleverse.com",
-          external: true,
-        },
+
       ],
     },
     {
@@ -248,18 +236,18 @@ export const siteConfig = {
       title: "Github",
       items: [
         {
-          title: "Relivator",
+          title: "Fleura",
           href: "https://github.com/blefnk/relivator",
           external: true,
         },
         {
-          title: "Reliverse",
-          href: "https://github.com/blefnk/reliverse",
+          title: "agypten.de",
+          href: "https://github.com/blefnk/relivator",
           external: true,
         },
         {
-          title: "Blefnk",
-          href: "https://github.com/blefnk",
+          title: "Demiroo",
+          href: "https://github.com/blefnk/",
           external: true,
         },
         {

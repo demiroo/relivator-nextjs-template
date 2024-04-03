@@ -165,13 +165,13 @@ export const products = mysqlTable("products", {
   description: text("description"),
   images: json("images").$type<StoredFile[] | null>().default(null),
   category: mysqlEnum("category", [
-    "accessories",
-    "furniture",
-    "clothing",
-    "tech",
+    "trauer",
+    "schnittblumen",
+    "topfpflanzen",
+    "hochzeit",
   ])
     .notNull()
-    .default("clothing"),
+    .default("topfpflanzen"),
   subcategory: varchar("subcategory", { length: 255 }),
   price: decimal("price", { precision: 10, scale: 2 }).notNull().default("0"),
   inventory: int("inventory").notNull().default(0),

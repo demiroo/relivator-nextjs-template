@@ -22,10 +22,10 @@ export async function generateProducts({
 
   const categories = productCategories.map((category) => category.title);
 
-  const category = faker.helpers.shuffle(categories)[0] ?? "furniture";
+  const category = faker.helpers.shuffle(categories)[0] ?? "schnittblumen";
 
   const subcategories = getSubcategories(category).map((s) => s.value);
-  const subcategory = faker.helpers.shuffle(subcategories)[0] ?? "decks";
+  const subcategory = faker.helpers.shuffle(subcategories)[0] ?? "rosen";
 
   for (let i = 0; i < count; i++) {
     ("");

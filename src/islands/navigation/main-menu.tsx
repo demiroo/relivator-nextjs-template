@@ -33,7 +33,7 @@ export function MainMenu({ items }: MainMenuProps) {
         href="/"
         className="hidden items-center space-x-2 lg:flex"
       >
-        <ActivitySquare className="h-6 w-6" />
+        <img src="/favicon.ico" alt={""} width={32} height={32} />
         <span className="hidden font-heading font-bold lg:inline-block">
           {siteConfig.name}
         </span>
