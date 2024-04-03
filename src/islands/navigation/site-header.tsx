@@ -90,15 +90,15 @@ export async function SiteHeader({
               size="icon"
               target="_blank"
               variant="outline"
-              href="https://github.com/blefnk/relivator"
+              href="https://github.com/demiroo/fleura-dev"
             >
               <Github className="h-4 w-4" />
             </ButtonLink>
-            <ButtonLink
+            <ButtonLink className="ml-2"
               size="icon"
               target="_blank"
               variant="outline"
-              href="https://discord.gg/TK2SpfXfTB"
+              href="https://discord.gg/mancos007"
             >
               <DiscordLogoIcon className="h-4 w-4" />
             </ButtonLink>

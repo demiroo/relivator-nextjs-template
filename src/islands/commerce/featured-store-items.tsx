@@ -61,9 +61,9 @@ export async function FeaturedStoreItems() {
    <section
   id="featured-items"
   aria-labelledby="featured-items-heading"
-  className="mt-10 grid grid-cols-1 items-stretch gap-6 text-card-foreground/80 sm:grid-cols-1"
+  className="mt-5 grid grid-cols-1 items-stretch gap-6 text-card-foreground/80 sm:grid-cols-1"
 >
-      <div className="rounded-lg border-2 border-dotted bg-card px-6 py-8 shadow-sm">
+      <div className="rounded-lg border-2 border-dotted bg-card px-3 py-4 shadow-sm">
         <div className="flex items-baseline">
           <h3 className="mb-10 flex-1 font-heading text-xl md:flex md:text-2xl lg:text-3xl">
             <span className="mr-1 hidden md:block">Featured</span> Products
@@ -83,7 +83,7 @@ export async function FeaturedStoreItems() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
           {guestEmail || session ?
             <>
               {someProducts.map((product: Product) => (
