@@ -54,8 +54,8 @@ export const contactConfig = {
   email: "support@fleura.de",
 };
 
-export const REPOSITORY_OWNER = "demiroo";
-export const REPOSITORY_NAME = "fleura";
+export const REPOSITORY_OWNER = "blefnk";
+export const REPOSITORY_NAME = "relivator";
 export const REPOSITORY_URL = `https://github.com/${REPOSITORY_OWNER}/${REPOSITORY_NAME}`;
 export const DISCORD_URL = "https://discord.gg/mancos007";
 export const baseUrl = new URL(
@@ -237,7 +237,7 @@ export const siteConfig = {
       items: [
         {
           title: "Fleura",
-          href: "https://github.com/demiroo/fleura",
+          href: "https://github.com/blefnk/relivator",
           external: true,
         },
         {
