@@ -72,7 +72,7 @@ export function OssStarsBadge({ githubStars }: { githubStars: number | null }) {
   const t = useTranslations("plugins");
   return (
     <>
-      {t("stars")} {githubStars}/500
+      {t("stars")} {githubStars}/1000
     </>
   );
 }
